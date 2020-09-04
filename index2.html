@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssinaSaúde</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div id="titulo1">
+		<h2>Prontuário Eletrônico</h2>
+	</div>
+	<div id="header">
+		<h3>Anamnese</h3>
+	</div>
+	<div class="fundinhodiferenciado">
+		<div id="formFicha">
+			<form>
+				<label>Queixa Principal</label>
+				<select class="queixa" name="queixa">
+				</select>
+		</div>
+		<h3>Selecioandos</h3>
+		<div id="seleciodos">
+			<div id="selecionado">
+				<p id="textoselecionado">Câncer X</p>
+			</div>
+			<div id="selecionado">
+				<p id="textoselecionado">Diabetes X</p>
+			</div>
+		</div>
+		<div>
+			<h3>Histórico da Moléstia</h3>
+			<textarea id="diseaseHistory" placeholder="Digite..."></textarea>
+		</div>
+	</div>
+			</form>
+	<button class="btnNewMR">Enviar</button>
+	<script >
+
+		var queixaprincipal = document.querySelector(".queixa");
+
+		queixaprincipal.options.length = 0;
+
+		let url = 'https://assina-prontuario.herokuapp.com/queixas';
+
+		fetch(url)
+		.then(res => res.json())
+		.then((out) => {
+		  console.log('Checkout this JSON! ', out);
+
+
+			for (i in out.data) {
+			  option = new Option(out.data[i].label, out.data[i].id);
+			  queixaprincipal.options[queixaprincipal.options.length] = option;
+			}
+
+		})
+		.catch(err => { throw err });
+
+	</script>
+	<script src="script2.js"></script>
+</body>
+</html>

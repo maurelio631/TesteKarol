@@ -1,0 +1,48 @@
+body{
+    background-color:whitesmoke;
+    font-family: Poppins;
+}
+#header{
+    background-color: rgb(96, 177, 248);
+    width:300px;
+    height: 25px;
+    border-color: fuchsia;
+    color: black;
+}
+#titulo1{
+    background-color: white;
+    height: 50px;
+    margin-top: -20px;
+    margin-left: -7px;
+}
+input{
+    margin: 20px,20px,20px,20px;
+}
+#selecionado{
+    background-color: lightskyblue;
+    width: 90px;
+    border-radius: 10px;
+}
+#textoselecionado{
+    text-align: center;
+}
+
+#selecionados{
+    display: inline-block;
+}
+#diseaseHistory{
+    background-color: whitesmoke;
+}
+.btnNewMR{
+    background-color: rgb(255, 20, 204) ;
+    width:200px;
+    height: 40px;
+    color: white;
+    border-color: deeppink;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.fundinhodiferenciado{
+    background-color: white;
+    width: 300px;
+}
